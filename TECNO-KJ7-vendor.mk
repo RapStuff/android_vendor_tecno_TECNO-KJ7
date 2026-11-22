@@ -1989,6 +1989,7 @@ PRODUCT_PACKAGES += \
     APUWareUtilsServer \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
+    android.hardware.sensors@2.X-subhal-mediatek \
     fingerprint.silead.default \
     gf_fingerprint.default \
     hwcomposer.mtk_common \
