@@ -1255,6 +1255,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.primary.mediatek \
     audio.r_submix.mediatek \
+    audio.usb.default \
     face.default \
     gps.default \
     kmsetkey.trustonic \
@@ -1675,6 +1676,7 @@ PRODUCT_PACKAGES += \
     libnxp_extamp_intf \
     liboemcrypto \
     libpcap_mtk \
+    libperfctl_vendor \
     libpixelflinger \
     libpkm \
     libpnpmgr \

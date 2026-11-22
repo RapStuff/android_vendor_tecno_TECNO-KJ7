@@ -839,6 +839,52 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "audio.usb.default",
+    owner: "tecno",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/hw/audio.usb.default.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libaudioutils",
+                "libtinyalsa",
+                "libalsautils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/audio.usb.default.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libaudioutils",
+                "libtinyalsa",
+                "libalsautils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "face.default",
     owner: "tecno",
     strip: {
@@ -1426,7 +1472,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so",
             ],
             shared_libs: [
-                "libhidlbase",
+                "libhidlbase-v32",
                 "libhidltransport",
                 "libhwbinder",
                 "libhardware",
@@ -1476,7 +1522,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so",
             ],
             shared_libs: [
-                "libhidlbase",
+                "libhidlbase-v32",
                 "libhidltransport",
                 "libhwbinder",
                 "libhardware",
@@ -17264,6 +17310,51 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libc++",
                 "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libperfctl_vendor",
+    owner: "tecno",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libperfctl_vendor.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "libui",
+                "libutils",
+                "libexpat",
+                "liblog",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libperfctl_vendor.so",
+            ],
+            shared_libs: [
+                "libc",
+                "libcutils",
+                "libui",
+                "libutils",
+                "libexpat",
+                "liblog",
+                "libc++",
                 "libm",
                 "libdl",
             ],
