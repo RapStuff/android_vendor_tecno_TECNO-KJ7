@@ -2086,6 +2086,7 @@ PRODUCT_PACKAGES += \
     libvideofilmeffect \
     libvideofilter_cl_64 \
     libvpu \
+    libwifi-hal-mtk \
     libwifitest \
     libwpfa \
     lib3a.ae.stat \
