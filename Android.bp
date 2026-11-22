@@ -13017,6 +13017,45 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libbt-vendor",
+    owner: "tecno",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libbt-vendor.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libbluetooth_mtk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libbt-vendor.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libbluetooth_mtk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libbwc",
     owner: "tecno",
     strip: {
@@ -36515,7 +36554,7 @@ cc_prebuilt_library_shared {
                 "libdmabufheap",
                 "libaedv",
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libimageio_plat_drv",
                 "libimageio_plat_pipe",
@@ -36704,7 +36743,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libmtkcam_ulog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libmtkcam_stdutils",
                 "android.frameworks.sensorservice@1.0",
@@ -38197,7 +38236,7 @@ cc_prebuilt_library_shared {
                 "lib3a.af.core",
                 "lib3a.flash",
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libladder",
                 "libnativewindow",
@@ -38258,7 +38297,7 @@ cc_prebuilt_library_shared {
                 "libaedv",
                 "liblog",
                 "libnativewindow",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libmtkcam_modulehelper",
                 "libcam.iopipe",
@@ -38316,7 +38355,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libWaterMarkProc",
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libladder",
                 "libnativewindow",
@@ -38486,7 +38525,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libmtkcam_ulog",
                 "libmtkcam_imgbuf",
@@ -38704,7 +38743,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libmtkcam_device3_utils",
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libcamera_metadata",
                 "libmtkcam_stdutils",
@@ -38746,7 +38785,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libmtkcam_device3_utils",
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libladder",
                 "libcamera_metadata",
@@ -38881,7 +38920,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libsync",
                 "libcamera_metadata",
@@ -39204,7 +39243,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libWaterMarkProc",
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libhardware",
                 "libgralloc_extra",
@@ -39288,7 +39327,7 @@ cc_prebuilt_library_shared {
                 "libfeature.stereo.provider",
                 "liblog",
                 "libmtkcam_ulog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libhardware",
                 "libladder",
@@ -39857,7 +39896,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libutils",
+                "libutils-v32",
                 "libcutils",
                 "libmtkcam_ulog",
                 "libmtkcam_stdutils",
@@ -41877,15 +41916,6 @@ dex_import {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.biometrics.fingerprint@2.1-service-mediatek.xml",
-    owner: "tecno",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service-mediatek.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "android.hardware.neuralnetworks-shim-service-mtk.xml",
     owner: "tecno",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml",
@@ -41997,15 +42027,6 @@ prebuilt_etc_xml {
     name: "manifest_cameraprovider.xml",
     owner: "tecno",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_cameraprovider.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "manifest_fingerprint.xml",
-    owner: "tecno",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_fingerprint.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -42920,41 +42941,6 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service-mediatek",
-    owner: "tecno",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-mediatek",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libhidlbase",
-                "libhardware",
-                "libutils",
-                "libbase",
-                "vendor.mediatek.hardware.mtkpower@1.0",
-                "android.hardware.biometrics.fingerprint@2.1",
-                "vendor.mediatek.hardware.biometrics.fingerprint@2.1",
-                "libtranlog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
     soc_specific: true,
 }
 

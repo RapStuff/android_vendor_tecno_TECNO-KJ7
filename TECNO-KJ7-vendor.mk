@@ -792,7 +792,6 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml \
     vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/handset.wav:$(TARGET_COPY_OUT_VENDOR)/etc/handset.wav \
     vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/init.insmod.mt6789.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.mt6789.cfg \
-    vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-mediatek.rc \
     vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.clearkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.clearkey.rc \
     vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/tecno/TECNO-KJ7/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
@@ -1578,6 +1577,7 @@ PRODUCT_PACKAGES += \
     libbluetooth_mtk_pure \
     libbluetooth_relayer \
     libbluetoothem_mtk \
+    libbt-vendor \
     libbwc \
     libcam3_transerverengine \
     libcamalgo.utility \
@@ -2344,7 +2344,6 @@ PRODUCT_PACKAGES += \
     vendor.trustonic.tee@1.0 \
     vendor.trustonic.tee@1.1 \
     com.transsion.tranfacsdk \
-    android.hardware.biometrics.fingerprint@2.1-service-mediatek.xml \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
     android.hardware.security.keymint-service.trustonic.xml \
     android.hardware.security.secureclock-service.trustonic.xml \
@@ -2358,7 +2357,6 @@ PRODUCT_PACKAGES += \
     manifest_apuware_hmp.xml \
     manifest_apuware_utils.xml \
     manifest_cameraprovider.xml \
-    manifest_fingerprint.xml \
     manifest_goodix.xml \
     manifest_hwcomposer.xml \
     manifest_media_c2_V1_1_default.xml \
@@ -2397,7 +2395,6 @@ PRODUCT_PACKAGES += \
     get_ufs_error \
     getgameserver \
     gsm0710muxd \
-    android.hardware.biometrics.fingerprint@2.1-service-mediatek \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gnss-service.mediatek \
