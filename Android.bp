@@ -43605,7 +43605,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service",
             ],
             shared_libs: [
-                "libhidlbase",
+                "libhidlbase-v32",
                 "libhidltransport",
                 "liblog",
                 "libutils",
@@ -45269,6 +45269,13 @@ cc_prebuilt_binary {
 }
 
 install_symlink {
+    name: "vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek",
+    soc_specific: true,
+    installed_location: "bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek",
+    symlink_target: "/vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789",
+}
+
+install_symlink {
     name: "vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek_mt6789",
     soc_specific: true,
     installed_location: "bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789",
@@ -45294,6 +45301,13 @@ install_symlink {
     soc_specific: true,
     installed_location: "bin/jpegtool",
     symlink_target: "/vendor/bin/mt6789/jpegtool",
+}
+
+install_symlink {
+    name: "vendor_bin_v3avpud",
+    soc_specific: true,
+    installed_location: "bin/v3avpud",
+    symlink_target: "/vendor/bin/mt6789/v3avpud.mt6789",
 }
 
 install_symlink {

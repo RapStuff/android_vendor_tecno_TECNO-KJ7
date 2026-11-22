@@ -2477,10 +2477,12 @@ PRODUCT_PACKAGES += \
     xcap
 
 PRODUCT_PACKAGES += \
+    vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek \
     vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek_mt6789 \
     vendor_bin_hw_camerahalserver \
     vendor_bin_dumpfaultd_mt6789 \
     vendor_bin_jpegtool \
+    vendor_bin_v3avpud \
     vendor_bin_v3avpud_mt6789 \
     vendor_lib_egl_libGLES_mali_so \
     vendor_lib_hw_audio_primary_mt6789_so \
