@@ -3079,3 +3079,11 @@ PRODUCT_PACKAGES += \
     vendor_lib64_s5khm6sx_mipi_raw_IdxMgr_so \
     vendor_lib64_s5khm6sx_mipi_raw_tuning_so \
     vendor_lib64_mtkcam_libmtkcam_streaminfo_plugin-p1stt_so
+
+
+PRODUCT_COPY_FILES += \
+    vendor/tecno/TECNO-KJ7/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml
+
+PRODUCT_PACKAGES += \
+    ImsService \
+    MtkGbaService
