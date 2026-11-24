@@ -1251,10 +1251,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl-mediatek \
     android.hardware.audio@7.0-impl-mediatek \
     android.hardware.thermal@2.0-impl \
-    audio.bluetooth.default \
     audio.primary.mediatek \
     audio.r_submix.mediatek \
-    audio.usb.default \
     face.default \
     gps.default \
     kmsetkey.trustonic \
