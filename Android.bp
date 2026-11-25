@@ -4,7 +4,7 @@
 
 soong_namespace {
     imports: [
-        "device/tecno/TECNO_KJ7",
+        "device/tecno/kj7",
         "hardware/mediatek",
         "hardware/mediatek/libion_mtk",
         "hardware/mediatek/libmtkperf_client",
