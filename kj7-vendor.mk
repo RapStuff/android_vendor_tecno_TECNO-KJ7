@@ -910,7 +910,6 @@ PRODUCT_COPY_FILES += \
     vendor/tecno/kj7/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/tecno/kj7/proprietary/vendor/etc/meow.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/meow.cfg \
     vendor/tecno/kj7/proprietary/vendor/etc/mpe.conf:$(TARGET_COPY_OUT_VENDOR)/etc/mpe.conf \
-    vendor/tecno/kj7/proprietary/vendor/etc/mtk_omx_core.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_omx_core.cfg \
     vendor/tecno/kj7/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
     vendor/tecno/kj7/proprietary/vendor/etc/mtk_vext_info:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_vext_info \
     vendor/tecno/kj7/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
@@ -1934,11 +1933,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.videotelephony@1.0 \
     vendor.transsion.hardware.trancam.trancamserver@1.0 \
     libHEVCdec_sa.ca7.android \
-    libMtkOmxAdpcmDec \
-    libMtkOmxAlacDec \
-    libMtkOmxApeDec \
-    libMtkOmxGsmDec \
-    libMtkOmxMp3Dec \
     libh264dec_customize \
     libh264dec_sa.ca7 \
     libh264dec_sd.ca7 \
@@ -1946,42 +1940,17 @@ PRODUCT_PACKAGES += \
     libh264enc_sa.ca7 \
     libmp4enc_sa.ca7 \
     libmp4enc_xa.ca7 \
-    librcs_interface \
-    librcs_volte_core \
-    libstagefright_soft_aacdec \
-    libstagefright_soft_aacenc \
-    libstagefright_soft_amrdec \
-    libstagefright_soft_amrnbenc \
-    libstagefright_soft_amrwbenc \
-    libstagefright_soft_avcdec \
-    libstagefright_soft_avcenc \
-    libstagefright_soft_flacdec \
-    libstagefright_soft_flacenc \
-    libstagefright_soft_g711dec \
-    libstagefright_soft_gsmdec \
-    libstagefright_soft_hevcdec \
-    libstagefright_soft_mp3dec \
-    libstagefright_soft_mpeg2dec \
-    libstagefright_soft_mpeg4dec \
-    libstagefright_soft_mpeg4enc \
-    libstagefright_soft_opusdec \
-    libstagefright_soft_rawdec \
-    libstagefright_soft_vorbisdec \
-    libstagefright_soft_vpxdec \
-    libstagefright_soft_vpxenc \
     libvcodec_utility_plat.mt6789 \
     libvolte_core_shr \
     libvolte_xdmc_shr \
     libvp8dec_sa.ca7 \
     libvp8enc_sa.ca7 \
     libvp9dec_sa.ca7 \
-    libvpud_vcodec \
     libvcodec_utility \
     libvcodec_utility_v3a \
     libvcodecdrv \
     libvcodecdrv_v3a \
     libvpudv3a_vcodec \
-    vendor.mediatek.hardware.rcs@2.0 \
     APUWareApusysServer \
     APUWareHmpServer \
     APUWareUtilsServer \
@@ -2373,7 +2342,6 @@ PRODUCT_PACKAGES += \
     bip \
     bip_ap \
     bt_dump \
-    ccci_fsd \
     ccci_mdinit \
     ccci_rpcd \
     charon \
@@ -2397,7 +2365,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gnss-service.mediatek \
-    android.hardware.media.c2@1.2-mediatek \
     android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks-shim-service-mtk \
     android.hardware.secure_element@1.2-service-mediatek \
@@ -2449,7 +2416,6 @@ PRODUCT_PACKAGES += \
     nvram_daemon \
     paytrigger_test \
     pnpmgr \
-    rcs_volte_stack \
     rt5512_calibration \
     smartcharging \
     smartpa_nvtest \
@@ -2465,10 +2431,8 @@ PRODUCT_PACKAGES += \
     volte_imcb \
     volte_imsm_93 \
     volte_md_status \
-    volte_rcs_ua \
     volte_stack \
     volte_ua \
-    vpud \
     wfca \
     wifi_dump \
     wmt_launcher \
@@ -2483,192 +2447,6 @@ PRODUCT_PACKAGES += \
     vendor_bin_jpegtool \
     vendor_bin_v3avpud \
     vendor_bin_v3avpud_mt6789 \
-    vendor_lib_egl_libGLES_mali_so \
-    vendor_lib_hw_audio_primary_mt6789_so \
-    vendor_lib_hw_audio_r_submix_mt6789_so \
-    vendor_lib_hw_kmsetkey_default_so \
-    vendor_lib_hw_gatekeeper_trustonic_so \
-    vendor_lib_hw_gatekeeper_default_so \
-    vendor_lib_hw_android_hardware_graphics_allocator@4_0-impl-mediatek_so \
-    vendor_lib_hw_android_hardware_graphics_mapper@4_0-impl-mediatek_so \
-    vendor_lib_hw_gralloc_common_so \
-    vendor_lib_hw_vendor_mediatek_hardware_camera_atms@1_0-impl_so \
-    vendor_lib_hw_vendor_mediatek_hardware_camera_bgservice@1_1-impl_so \
-    vendor_lib_hw_vendor_mediatek_hardware_pq@2_15-impl_so \
-    vendor_lib_hw_vulkan_mali_so \
-    vendor_lib_arm_graphics-V1-ndk_platform_so \
-    vendor_lib_fake_serial_yuv_IdxMgr_so \
-    vendor_lib_fake_serial_yuv_tuning_so \
-    vendor_lib_gc02m1macro_mipi_raw_IdxMgr_so \
-    vendor_lib_gc02m1macro_mipi_raw_tuning_so \
-    vendor_lib_gc02m3macro_mipi_raw_IdxMgr_so \
-    vendor_lib_gc02m3macro_mipi_raw_tuning_so \
-    vendor_lib_gc32e1_mipi_raw_IdxMgr_so \
-    vendor_lib_gc32e1_mipi_raw_tuning_so \
-    vendor_lib_hi3231q_mipi_raw_IdxMgr_so \
-    vendor_lib_lib3a_ae_core_so \
-    vendor_lib_lib3a_ae_so \
-    vendor_lib_lib3a_aishutter_models_so \
-    vendor_lib_lib3a_awb_core_so \
-    vendor_lib_lib3a_log_so \
-    vendor_lib_libCamera_fakeserialyuv_E2EHDR_Preview_so \
-    vendor_lib_libCamera_fakeserialyuv_E2EHDR_Video_so \
-    vendor_lib_libCamera_fakeserialyuv_Face_Capture_so \
-    vendor_lib_libCamera_fakeserialyuv_Flash_Capture_so \
-    vendor_lib_libCamera_fakeserialyuv_HDR_Capture_so \
-    vendor_lib_libCamera_fakeserialyuv_HDR_Preview_so \
-    vendor_lib_libCamera_fakeserialyuv_HDR_Reconfig_Preview_so \
-    vendor_lib_libCamera_fakeserialyuv_HDR_Reconfig_Video_so \
-    vendor_lib_libCamera_fakeserialyuv_HDR_Video_so \
-    vendor_lib_libCamera_fakeserialyuv_N3D_Capture_so \
-    vendor_lib_libCamera_fakeserialyuv_N3D_Preview_so \
-    vendor_lib_libCamera_fakeserialyuv_N3D_Video_so \
-    vendor_lib_libCamera_fakeserialyuv_P1_YUV_so \
-    vendor_lib_libCamera_fakeserialyuv_Scene_Capture_so \
-    vendor_lib_libCamera_fakeserialyuv_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_fakeserialyuv_Scene_Preview_so \
-    vendor_lib_libCamera_fakeserialyuv_Scene_Preview_4k_so \
-    vendor_lib_libCamera_fakeserialyuv_Scene_Preview_ZSD_Flash_so \
-    vendor_lib_libCamera_fakeserialyuv_Video_1080_so \
-    vendor_lib_libCamera_fakeserialyuv_Video_4k_so \
-    vendor_lib_libCamera_gc02m1macromipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_gc02m1macromipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_E2EHDR_Preview_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_E2EHDR_Video_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Face_Capture_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Flash_Capture_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_HDR_Capture_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_HDR_Preview_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_HDR_Reconfig_Preview_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_HDR_Reconfig_Video_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_HDR_Video_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_N3D_Capture_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_N3D_Preview_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_N3D_Video_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_P1_YUV_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Scene_Preview_4k_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Scene_Preview_ZSD_Flash_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Video_1080_so \
-    vendor_lib_libCamera_gc02m3macromipiraw_Video_4k_so \
-    vendor_lib_libCamera_gc32e1mipiraw_Face_Capture_so \
-    vendor_lib_libCamera_gc32e1mipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_gc32e1mipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pblcgc02m1macromipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pblcgc02m1macromipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_E2EHDR_Preview_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_E2EHDR_Video_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Face_Capture_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Flash_Capture_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_HDR_Capture_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_HDR_Preview_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_HDR_Reconfig_Preview_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_HDR_Reconfig_Video_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_HDR_Video_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_N3D_Capture_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_N3D_Preview_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_N3D_Video_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_P1_YUV_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Scene_Preview_4k_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Scene_Preview_ZSD_Flash_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Video_1080_so \
-    vendor_lib_libCamera_pblcgc02m3macromipiraw_Video_4k_so \
-    vendor_lib_libCamera_pblcgc32e1mipiraw_Face_Capture_so \
-    vendor_lib_libCamera_pblcgc32e1mipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pblcgc32e1mipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pblcs5khm6sxmipiraw_Flash_Capture_so \
-    vendor_lib_libCamera_pblcs5khm6sxmipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pblcs5khm6sxmipiraw_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_pblcs5khm6sxmipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pbrogc02m1macromipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pbrogc02m1macromipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_E2EHDR_Preview_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_E2EHDR_Video_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Face_Capture_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Flash_Capture_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_HDR_Capture_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_HDR_Preview_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_HDR_Reconfig_Preview_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_HDR_Reconfig_Video_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_HDR_Video_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_N3D_Capture_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_N3D_Preview_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_N3D_Video_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_P1_YUV_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Scene_Preview_4k_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Scene_Preview_ZSD_Flash_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Video_1080_so \
-    vendor_lib_libCamera_pbrogc02m3macromipiraw_Video_4k_so \
-    vendor_lib_libCamera_pbrogc32e1mipiraw_Face_Capture_so \
-    vendor_lib_libCamera_pbrogc32e1mipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pbrogc32e1mipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_pbros5khm6sxmipiraw_Flash_Capture_so \
-    vendor_lib_libCamera_pbros5khm6sxmipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_pbros5khm6sxmipiraw_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_pbros5khm6sxmipiraw_Scene_Preview_so \
-    vendor_lib_libCamera_s5khm6sxmipiraw_Flash_Capture_so \
-    vendor_lib_libCamera_s5khm6sxmipiraw_Scene_Capture_so \
-    vendor_lib_libCamera_s5khm6sxmipiraw_Scene_Capture_4cell_so \
-    vendor_lib_libCamera_s5khm6sxmipiraw_Scene_Preview_so \
-    vendor_lib_libaal_cust_func_so \
-    vendor_lib_libaalservice_so \
-    vendor_lib_libaiselector_so \
-    vendor_lib_libcam_hal3a_log_so \
-    vendor_lib_libcam_halsensor_hwintegration_so \
-    vendor_lib_libcamalgo_platform2_so \
-    vendor_lib_libcameracustom_lens_so \
-    vendor_lib_libcameracustom_so \
-    vendor_lib_libdpframework_so \
-    vendor_lib_libgpudataproducer_so \
-    vendor_lib_libmtk_drvb_so \
-    vendor_lib_libmtkcam_atmseventmgr_so \
-    vendor_lib_libmtkcam_eventcallback_so \
-    vendor_lib_libmtkcam_debugutils_so \
-    vendor_lib_libmtkcam_metadata_so \
-    vendor_lib_libmtkcam_modulehelper_so \
-    vendor_lib_libmtkcam_stdutils_so \
-    vendor_lib_libmtkcam_sysutils_so \
-    vendor_lib_libmtkcam_tuning_utils_so \
-    vendor_lib_libmtkcam_ulog_so \
-    vendor_lib_libneuralnetworks_sl_driver_mtk_prebuilt_so \
-    vendor_lib_libneuron_adapter_mgvi_so \
-    vendor_lib_libnir_neon_driver_so \
-    vendor_lib_libpq_cust_base_so \
-    vendor_lib_libpq_prot_so \
-    vendor_lib_libpqparamparser_so \
-    vendor_lib_libvcodec_utility_so \
-    vendor_lib_libvcodec_utility_v3a_so \
-    vendor_lib_libvcodecdrv_so \
-    vendor_lib_libvcodecdrv_v3a_so \
-    vendor_lib_libvpudv3a_vcodec_so \
-    vendor_lib_pblcgc02m1macro_mipi_raw_IdxMgr_so \
-    vendor_lib_pblcgc02m1macro_mipi_raw_tuning_so \
-    vendor_lib_pblcgc02m3macro_mipi_raw_IdxMgr_so \
-    vendor_lib_pblcgc02m3macro_mipi_raw_tuning_so \
-    vendor_lib_pblcgc32e1_mipi_raw_IdxMgr_so \
-    vendor_lib_pblcgc32e1_mipi_raw_tuning_so \
-    vendor_lib_pblchi3231q_mipi_raw_IdxMgr_so \
-    vendor_lib_pblcs5khm6sx_mipi_raw_IdxMgr_so \
-    vendor_lib_pblcs5khm6sx_mipi_raw_tuning_so \
-    vendor_lib_pbrogc02m1macro_mipi_raw_IdxMgr_so \
-    vendor_lib_pbrogc02m1macro_mipi_raw_tuning_so \
-    vendor_lib_pbrogc02m3macro_mipi_raw_IdxMgr_so \
-    vendor_lib_pbrogc02m3macro_mipi_raw_tuning_so \
-    vendor_lib_pbrogc32e1_mipi_raw_IdxMgr_so \
-    vendor_lib_pbrogc32e1_mipi_raw_tuning_so \
-    vendor_lib_pbrohi3231q_mipi_raw_IdxMgr_so \
-    vendor_lib_pbros5khm6sx_mipi_raw_IdxMgr_so \
-    vendor_lib_pbros5khm6sx_mipi_raw_tuning_so \
-    vendor_lib_s5khm6sx_mipi_raw_IdxMgr_so \
-    vendor_lib_s5khm6sx_mipi_raw_tuning_so \
     vendor_lib64_egl_libGLES_mali_so \
     vendor_lib64_hw_audio_primary_mt6789_so \
     vendor_lib64_hw_audio_r_submix_mt6789_so \
